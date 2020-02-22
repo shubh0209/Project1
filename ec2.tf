@@ -5,7 +5,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "server" {
-  ami           = "ami-0a887e401f7654935"
+  ami           = "ami-0d9462a653c34dab7"
   instance_type = "t2.micro"
   security_groups = ["${aws_security_group.dockersg.name}"]
   key_name  = "jenkinskp"
