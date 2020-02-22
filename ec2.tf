@@ -1,14 +1,14 @@
 # Configure the AWS Provider
 provider "aws" {
   version = "~> 2.0"
-  region  = "us-east-1"
+  region  = "ap-south-1"
 }
 
 resource "aws_instance" "server" {
   ami           = "ami-0a887e401f7654935"
   instance_type = "t2.micro"
   security_groups = ["${aws_security_group.dockersg.name}"]
-  key_name  = "dockerKP"
+  key_name  = "jenkinskp"
 
   provisioner "file" {
   source      = "./script.sh"
