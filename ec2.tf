@@ -35,7 +35,7 @@ resource "aws_instance" "server" {
   }
 
   tags = {
-    Name = "Docker1"
+    Name = "Managed by Terraform"
   }
 }
 
