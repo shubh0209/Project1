@@ -35,7 +35,7 @@ resource "aws_instance" "server" {
   }
 
   tags = {
-    Name = "Managed by Terraform"
+    Name = "Managed by terraform"
   }
 }
 
