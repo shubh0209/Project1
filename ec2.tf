@@ -30,7 +30,7 @@ resource "aws_instance" "server" {
 
     type = "ssh"
     user = "ec2-user"
-    private_key = file("./jenkins.ppk")
+    private_key = file("./jenkinskp.ppk")
     host = self.public_ip
   }
 
