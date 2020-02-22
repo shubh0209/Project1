@@ -8,7 +8,7 @@ resource "aws_instance" "server" {
   ami           = "ami-0d9462a653c34dab7"
   instance_type = "t2.micro"
   security_groups = ["${aws_security_group.dockersg.name}"]
-  key_name  = "jenkinskp"
+  key_name  = "dockerkp"
 
   provisioner "file" {
   source      = "./script.sh"
@@ -30,7 +30,7 @@ resource "aws_instance" "server" {
 
     type = "ssh"
     user = "ec2-user"
-    private_key = file("./jenkinskp.ppk")
+    private_key = file("./dockerkp.pem")
     host = self.public_ip
   }
 
