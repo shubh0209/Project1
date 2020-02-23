@@ -9,4 +9,4 @@ sudo bash -c "echo 'Hello World, I am  nginx server which serves static content,
 line triggered by a GIT push to master branch.' > index.html"
 
 sudo docker run -d -p 80:80 -v /nginx/:/usr/share/nginx/html/ --name nginx nginx
-sudo docker run -d shubh228/simple-nodejs:v1 -p 8080:8080
+sudo docker run -d -p 8080:8080 shubh228/simple-nodejs:v1
